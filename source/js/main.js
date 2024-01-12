@@ -1,17 +1,11 @@
-import Swiper from 'swiper';
-import {Pagination} from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
+import {iosVhFix} from './utils/ios-vh-fix';
+import {initSliderHero} from './modules/sliders/init-slider-hero';
 
-const slider = document.querySelector('[data-swiper="slider"]');
-const sliderPagination = document.querySelector('[data-swiper-pagination="slider"]');
+window.addEventListener('DOMContentLoaded', () => {
+  iosVhFix();
+  initSliderHero();
 
-// eslint-disable-next-line no-unused-vars
-const swiper = new Swiper(slider, {
-  modules: [Pagination],
-  pagination: {
-    el: sliderPagination,
-    clickable: true,
-  },
-  loop: true,
+  window.addEventListener('load', () => {
+
+  });
 });
