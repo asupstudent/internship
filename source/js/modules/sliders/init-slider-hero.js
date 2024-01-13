@@ -10,9 +10,9 @@ const setSliderHero = () => new Swiper(heroSlider, {
     el: heroSliderPagination,
     clickable: true,
   },
-  autoplay: {
-    delay: 3000,
-  },
+  // autoplay: {
+  //   delay: 3000,
+  // },
   loop: true,
   breakpoints: {
     1440: {

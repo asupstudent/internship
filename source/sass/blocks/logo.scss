@@ -1,0 +1,12 @@
+.logo {
+  width: 52px;
+  height: 50px;
+  padding: 10px;
+  flex-shrink: 0;
+  background-color: $color-white;
+  border-radius: 50%;
+
+  svg {
+    display: block;
+  }
+}
