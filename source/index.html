@@ -27,7 +27,7 @@
               <use href="__spritemap#sprite-logo"></use>
             </svg>
           </a>
-          <button class="header__burger-button burger-button btn" type="button" data-menu="burger-button">
+          <button class="header__burger-button btn btn--burger" type="button" data-menu="burger-button">
             <span>Меню</span>
             <svg width="20" height="20" viewBox="0 0 20 20" role="img" aria-hidden="true" focusable="false" data-menu="is-closed">
               <use href="__spritemap#sprite-closed-menu"></use>
@@ -36,6 +36,14 @@
               <use href="__spritemap#sprite-opened-menu"></use>
             </svg>
           </button>
+          <a class="btn btn--secondary" href="#">
+            <span>Подробнее</span>
+            <div class="btn__icon">
+              <svg width="10" height="10" viewBox="0 0 10 10" role="img" aria-hidden="true" focusable="false">
+                <use href="__spritemap#sprite-arrow-btn"></use>
+              </svg>
+            </div>
+          </a>
           <div class="header__site-nav site-nav">
             <ul class="site-nav__list" data-accordion="parent">
               <li class="site-nav__item">
@@ -108,11 +116,13 @@
                 <h2>Глобальный профессиональный опыт обучения за рубежом</h2>
                 <div class="hero__container">
                   <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий стиль жизни!</p>
-                  <a class="btn" href="#">
+                  <a class="btn btn--primary" href="#">
                     <span>Подробнее</span>
-                    <svg width="10" height="10" viewBox="0 0 10 10" role="img" aria-hidden="true" focusable="false">
-                      <use href="__spritemap#sprite-arrow-btn"></use>
-                    </svg>
+                    <div class="btn__icon">
+                      <svg width="10" height="10" viewBox="0 0 10 10" role="img" aria-hidden="true" focusable="false">
+                        <use href="__spritemap#sprite-arrow-btn"></use>
+                      </svg>
+                    </div>
                   </a>
                 </div>
               </div>
@@ -134,9 +144,11 @@
                   <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
                   <a class="btn" href="#">
                     <span>Подробнее</span>
-                    <svg width="10" height="10" viewBox="0 0 10 10" role="img" aria-hidden="true" focusable="false">
-                      <use href="__spritemap#sprite-arrow-btn"></use>
-                    </svg>
+                    <div class="btn__icon">
+                      <svg width="10" height="10" viewBox="0 0 10 10" role="img" aria-hidden="true" focusable="false">
+                        <use href="__spritemap#sprite-arrow-btn"></use>
+                      </svg>
+                    </div>
                   </a>
                 </div>
               </div>
@@ -158,9 +170,11 @@
                   <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
                   <a class="btn" href="#">
                     <span>Подробнее</span>
-                    <svg width="10" height="10" viewBox="0 0 10 10" role="img" aria-hidden="true" focusable="false">
-                      <use href="__spritemap#sprite-arrow-btn"></use>
-                    </svg>
+                    <div class="btn__icon">
+                      <svg width="10" height="10" viewBox="0 0 10 10" role="img" aria-hidden="true" focusable="false">
+                        <use href="__spritemap#sprite-arrow-btn"></use>
+                      </svg>
+                    </div>
                   </a>
                 </div>
               </div>
@@ -176,7 +190,7 @@
               </div>
             </li>
           </ul>
-          <div class="hero__pagination swiper-pagination" data-swiper-pagination="hero"></div>
+          <!-- <div class="hero__pagination swiper-pagination" data-swiper-pagination="hero"></div> -->
         </div>
       </section>
     </header>

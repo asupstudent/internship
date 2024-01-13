@@ -23,6 +23,10 @@
   gap: 30px;
 }
 
+.header__burger-button {
+  z-index: 2;
+}
+
 .header__overlay {
   display: none;
 }
