@@ -35,4 +35,19 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-nav__list {
+  gap: 28px;
+}
+
+.site-nav__nested-list {
+  gap: 16px;
+}
+
+.site-nav__item {
+  margin: 0;
+  padding: 0;
 }
