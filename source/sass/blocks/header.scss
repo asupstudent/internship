@@ -15,12 +15,25 @@
   }
 }
 
+.header__logo.is-menu-opened {
+  @include vp-767 {
+    display: none;
+  }
+}
+
 .header__main-nav-wrapper {
   position: relative;
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
   gap: 30px;
+}
+
+.header__main-nav-wrapper.is-menu-opened {
+  @include vp-767 {
+    grid-template-columns: 100%;
+    gap: 0;
+  }
 }
 
 .header__burger-button {
