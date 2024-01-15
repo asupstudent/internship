@@ -5,13 +5,15 @@
 }
 
 .hero__item {
+  position: relative;
   min-height: 800px;
   display: flex;
   flex-direction: column;
+  justify-content: end;
+  padding-bottom: 60px;
 }
 
 .hero__content {
-  margin-top: auto;
   background-color: $color-white;
 }
 
@@ -36,5 +38,37 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+
+.hero__pagination {
+  display: flex;
+  gap: 12px;
+  width: fit-content;
+  height: fit-content;
+  padding: 14px 20px;
+  border-radius: 20px 20px 0 0;
+}
+
+.hero__pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border: 1px solid $color-cerulean-blue;
+  background-color: $color-transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color $trans-default;
+
+  &--active {
+    background-color: $color-cerulean-blue;
+  }
+
+  &:active {
+    background-color: $color-cerulean-blue;
+  }
+
+  @include vp-767 {
+    width: 8px;
+    height: 8px;
   }
 }

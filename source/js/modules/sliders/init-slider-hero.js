@@ -1,18 +1,20 @@
-import Swiper from 'swiper';
-import {Pagination, Autoplay} from 'swiper/modules';
+import Swiper from 'swiper/bundle';
 
 const heroSlider = document.querySelector('[data-swiper="hero"]');
-const heroSliderPagination = document.querySelector('[data-swiper-pagination="hero"]');
+const heroSliderPagination = document.querySelector('[data-swiper="hero-pagination"]');
 
 const setSliderHero = () => new Swiper(heroSlider, {
-  modules: [Pagination, Autoplay],
   pagination: {
     el: heroSliderPagination,
     clickable: true,
+    type: 'bullets',
+    bulletElement: 'div',
+    bulletClass: 'hero__pagination-bullet',
+    bulletActiveClass: 'hero__pagination-bullet--active',
   },
-  // autoplay: {
-  //   delay: 3000,
-  // },
+  autoplay: {
+    delay: 3000,
+  },
   loop: true,
   breakpoints: {
     1440: {
