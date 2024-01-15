@@ -1,9 +1,9 @@
 .btn {
-  padding: 4px 4px 4px 30px;
+  padding: 3px 3px 3px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 29px;
   font-size: 14px;
   font-weight: 500;
   line-height: 14px;
@@ -16,6 +16,7 @@
   text-decoration: none;
   appearance: none;
   width: fit-content;
+  border: 1px solid $color-transparent;
 
   svg {
     display: block;
@@ -68,6 +69,7 @@
   }
 
   svg {
+    stroke: $color-white;
     opacity: 0.6;
   }
 }
@@ -160,7 +162,7 @@
   border: 1px solid $color-cerulean-blue;
   color: $color-cerulean-blue;
   background-color: $color-white;
-  padding-left: 20px;
+  padding-left: 19px;
   gap: 20px;
   width: 134px;
 
