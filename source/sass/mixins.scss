@@ -9,3 +9,16 @@
     @content;
   }
 }
+
+@mixin angle {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    mask-image: url("../img/svg/angle.svg");
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    background-color: $color-white;
+  }
+}

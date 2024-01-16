@@ -22,6 +22,16 @@
   }
 }
 
+.hero__item--programs {
+  p {
+    padding-right: 20px;
+
+    @include vp-1439 {
+      padding-right: 0;
+    }
+  }
+}
+
 .hero__image {
   position: absolute;
   inset: 0;
@@ -79,6 +89,8 @@
 }
 
 .hero__pagination {
+  @include angle;
+
   display: flex;
   gap: 12px;
   width: fit-content;
@@ -86,6 +98,19 @@
   padding: 14px 20px;
   border-radius: 20px 20px 0 0;
   background-color: $color-white;
+
+  &::after {
+    width: 20px;
+    height: 20px;
+    right: -20px;
+    bottom: 0;
+
+    @include vp-767 {
+      width: 10px;
+      height: 10px;
+      right: -10px;
+    }
+  }
 
   @include vp-767 {
     padding: 10px 16px;
@@ -117,6 +142,8 @@
 }
 
 .hero__container {
+  @include angle;
+
   margin-top: -7px;
   padding: 0 50px 28px;
   width: 62.23%;
@@ -128,10 +155,24 @@
   background-color: $color-white;
   border-radius: 0 0 30px 30px;
 
+  &::after {
+    width: 26px;
+    height: 26px;
+    right: -26px;
+    top: 7px;
+    transform: rotate(90deg);
+  }
+
   @include vp-1439 {
+    align-items: flex-start;
     padding: 0 40px 35px;
     width: 87.23%;
     max-width: 591px;
+    margin-top: -4px;
+
+    &::after {
+      top: 4px;
+    }
   }
 
   @include vp-767 {
@@ -142,6 +183,11 @@
     gap: 0;
     width: 100%;
     background-color: $color-transparent;
+    margin-top: -5px;
+
+    &::after {
+      display: none;
+    }
   }
 
   p {
@@ -155,24 +201,50 @@
     }
 
     @include vp-767 {
+      @include angle;
+
       font-size: 14px;
-      padding: 20px 14px 16px;
+      padding: 0 14px 10px;
       border-radius: 0 0 14px;
       background-color: $color-white;
       width: 92%;
+
+      &::after {
+        width: 10px;
+        height: 10px;
+        right: -10px;
+        top: 5px;
+        transform: rotate(90deg);
+      }
     }
   }
 }
 
 .hero__btn-wrapper {
+  @include angle;
+
   display: flex;
   flex-direction: column;
 
   @include vp-767 {
-    padding: 10px 15px;
+    padding: 6px 15px 10px;
     background-color: $color-white;
     border-radius: 0 0 14px 14px;
     max-width: 182px;
     width: 100%;
+
+    &::after {
+      width: 10px;
+      height: 10px;
+      right: -10px;
+      top: 0;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.hero__btn {
+  @include vp-1439 {
+    margin-top: 4px;
   }
 }
