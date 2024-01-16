@@ -12,9 +12,9 @@ const setSliderHero = () => new Swiper(heroSlider, {
     bulletClass: 'hero__pagination-bullet',
     bulletActiveClass: 'hero__pagination-bullet--active',
   },
-  autoplay: {
-    delay: 3000,
-  },
+  // autoplay: {
+  //   delay: 3000,
+  // },
   loop: true,
   breakpoints: {
     1440: {
