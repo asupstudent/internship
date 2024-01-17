@@ -1,7 +1,9 @@
-import {initBurgerMenu} from './modules/burger/init-burger-menu';
-import {initAccordions} from './vendor/accordions/init-accordion';
-import {initSliderHero} from './modules/sliders/init-slider-hero';
-
+import './utils/scroll-lock';
+import './utils/focus-lock';
+import {initBurgerMenu} from './modules/init-burger-menu';
+import {initAccordions} from './modules/init-accordions';
+import {initModals} from './modules/init-modals';
+import {initSliderHero} from './modules/init-slider-hero';
 
 window.addEventListener('DOMContentLoaded', () => {
   initSliderHero();
@@ -9,5 +11,6 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initBurgerMenu();
     initAccordions();
+    initModals();
   });
 });

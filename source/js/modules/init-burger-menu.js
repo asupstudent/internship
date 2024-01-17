@@ -1,6 +1,3 @@
-import '../../utils/scroll-lock';
-import '../../utils/focus-lock';
-
 const isMenuOpened = 'is-menu-opened';
 const wrapper = document.querySelector('[data-menu="burger-wrapper"]');
 const logo = document.querySelector('[data-menu="burger-logo"]');
