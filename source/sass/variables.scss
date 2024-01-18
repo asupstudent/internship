@@ -20,6 +20,7 @@ $color-black-pearl: rgba(13, 29, 51, 0.4);
 $tf-default: ease;
 $trans-default: 0.3s $tf-default;
 $trans-600: 0.6s $tf-default;
+$trans-modal: 0.6s cubic-bezier(0.55, 0, 0.1, 1);
 $vp-320: 320px;
 $vp-768: 768px;
 $vp-1440: 1440px;
