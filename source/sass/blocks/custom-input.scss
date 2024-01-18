@@ -1,110 +1,167 @@
-.custom-input,
-.custom-textarea {
-  position: relative;
-
-  display: flex;
-  width: 100%;
-  padding: 14px 0 28px;
-
-  @media screen and (max-width: 767px) {
-    padding: 4px 0 48px;
-  }
-
+.custom-input {
   label {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  span {
+    font-size: 14px;
+    font-weight: 400;
+
+    @include vp-1439 {
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      line-height: 14px;
+    }
+  }
+
+  input,
+  textarea {
     width: 100%;
-    justify-content: space-between;
+    padding: 11px 25px;
+    font-size: 18px;
+    line-height: 18px;
+    border-radius: 8px;
+    border: none;
+    transition: outline $trans-default;
+    background-color: $color-transparent;
+  }
 
-    @media screen and (max-width: 767px) {
-      align-items: flex-start;
-      flex-direction: column;
+  input {
+    min-height: 50px;
+  }
+
+  textarea {
+    min-height: 98px;
+
+    @include vp-767 {
+      min-height: 94px;
+    }
+  }
+}
+
+.custom-input.is-invalid {
+  input,
+  textarea {
+    outline: 1px solid $color-wild-watermelon;
+    background-color: $color-wild-watermelon-20;
+  }
+}
+
+.custom-input--primary {
+  label {
+    &:focus-within span {
+      color: $color-alabaster;
     }
 
-    input,
-    textarea {
-      flex-grow: 1;
-      max-width: 300px;
-      min-height: 48px;
-      margin-left: auto;
-      padding: 10px;
+    &:hover span {
+      color: $color-alabaster;
+    }
 
-      border: 2px solid rgba(#000000, 0.2);
-      border-radius: 5px;
-      outline: none;
-
-      transition: border 0.3s ease;
-
-      @media screen and (max-width: 767px) {
-        max-width: unset;
-        width: 100%;
-      }
-
-      &:hover {
-        border: 2px solid rgba(#000000, 0.5);
-      }
-
-      &:focus {
-        border: 2px solid rgba(#000000, 0.8);
-      }
+    &:hover input,
+    &:hover textarea {
+      outline: 1px solid $color-white;
     }
   }
 
-  &__label {
-    @media screen and (max-width: 767px) {
-      margin: 0 0 18px 0;
+  span {
+    line-height: 18px;
+    color: $color-alabaster-80;
+
+    @include vp-767 {
+      font-size: 12px;
     }
   }
 
-  &__error {
-    position: absolute;
-    right: 0;
-    bottom: 35px;
+  input,
+  textarea {
+    outline: 1px solid $color-white-30;
+    color: $color-white;
 
-    color: #ff1553;
+    &:active,
+    &:focus {
+      outline: 1px solid $color-white;
+    }
+  }
+}
 
-    opacity: 0;
+.custom-input--secondary {
+  label {
+    &:focus-within span {
+      color: $color-charcoal;
+    }
 
-    transition: opacity 0.3s ease;
+    &:hover span {
+      color: $color-charcoal;
+    }
 
-    @media screen and (max-width: 767px) {
-      bottom: 20px;
+    &:hover input,
+    &:hover textarea {
+      outline: 1px solid $color-charcoal;
+    }
+
+    @include vp-767 {
+      gap: 4px;
     }
   }
 
-  &.is-invalid {
-    input,
-    textarea {
-      border: 2px solid #ff1553;
+  span {
+    line-height: 20px;
+    color: $color-charcoal-80;
+  }
 
-      &:focus,
-      &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
-      }
+  input,
+  textarea {
+    color: $color-charcoal;
+    outline: 1px solid $color-charcoal-30;
+
+    &:active,
+    &:focus {
+      outline: 1px solid $color-charcoal;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
     }
   }
 
-  &.is-valid {
-    input {
-      border: 2px solid #22b259;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba(#22b259, 0.5);
-      }
+  input {
+    @include vp-767 {
+      min-height: 44px;
     }
   }
-  .input-message {
-    position: absolute;
-    right: 0;
-    bottom: -5px;
+}
 
-    &.is-invalid {
-      color: #ff0000;
-    }
+.custom-input--primary.is-disabled {
+  pointer-events: none;
+  cursor: default;
 
-    &.is-valid {
-      color: #15ab07;
-    }
+  span {
+    color: $color-alabaster-60;
+  }
+
+  input,
+  textarea {
+    opacity: 0.4;
+    outline: 1px solid $color-white;
+    background-color: $color-white-20;
+  }
+}
+
+.custom-input--secondary.is-disabled {
+  pointer-events: none;
+  cursor: default;
+
+  span {
+    color: $color-mischka-60;
+  }
+
+  input,
+  textarea {
+    outline: 1px solid $color-mischka-50;
+    background-color: $color-mischka-20;
   }
 }
