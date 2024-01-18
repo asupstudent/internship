@@ -245,7 +245,7 @@
     <footer>
     </footer>
   </div>
-  <div class="modal is-active modal--preload" data-modal="about">
+  <div class="modal modal--preload" data-modal="about">
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal="data-close-modal"></div>
       <div class="modal__content form form--modal">
@@ -258,13 +258,13 @@
         <p>Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
         <div class="form__wrapper" data-form-validate data-callback="base">
           <form action="https://echo.htmlacademy.ru/" method="post">
-            <div class="form__input-wrapper form__input-wrapper--modal" data-required data-validate-type="text" data-limitation="letters-and-digit">
+            <div class="form__input-wrapper form__input-wrapper--modal custom-input custom-input--modal" data-required data-validate-type="text" data-limitation="letters-and-digit">
               <label>
                 <span>Имя</span>
                 <input type="text" name="name" required>
               </label>
             </div>
-            <div class="form__input-wrapper form__input-wrapper--modal" data-required data-validate-type="phone">
+            <div class="form__input-wrapper form__input-wrapper--modal custom-input custom-input--modal" data-required data-validate-type="phone">
               <label>
                 <span>Телефон</span>
                 <input type="tel" name="phone" required>
@@ -272,7 +272,7 @@
             </div>
             <div class="form__input-wrapper form__input-wrapper--modal form__select custom-select" data-select="data-select" data-validate-type="select" data-required="true" data-name="city" data-id="city">
               <span>Выберите город</span>
-              <button class="form__select-btn form__select-btn--modal custom-select__btn" type="button" aria-label="Выберите город.">
+              <button class="form__select-btn form__select-btn--modal custom-select__button" type="button" aria-label="Выберите город.">
                 <span class="custom-select__text"></span>
                 <span class="form__select-icon form__select-icon--modal custom-select__icon"></span>
               </button>
@@ -282,17 +282,15 @@
                 <li class="form__select-item custom-select__item" tabindex="0" data-select-value="arzamas" aria-selected="false" role="option">Арзамас</li>
               </ul>
             </div>
-            <div class="custom-toggle custom-toggle--modal" data-validate-type="checkbox" data-on-input-validate="data-on-input-validate" data-required="data-required">
+            <div class="custom-toggle custom-toggle--checkbox custom-toggle--modal" data-validate-type="checkbox" data-on-input-validate="data-on-input-validate" data-required="data-required">
               <label>
                 <input type="checkbox" value="agree" name="user-agreement" aria-label="Согласие на обработку персональных данных.">
-                <span></span>
+                <span class="custom-toggle__icon"></span>
                 <svg width="10" height="8" viewBox="0 0 10 8" role="img" aria-hidden="true" focusable="false">
                   <use href="__spritemap#sprite-check"></use>
                 </svg>
+                <span class="custom-toggle__label">Я согласен на обработку моих персональных данных</span>
               </label>
-              <div class="custom-toggle__text-wrapper">
-                <span class="custom-toggle__text">Я согласен на обработку моих персональных данных</span>
-              </div>
             </div>
             <button class="form__btn btn btn--primary" type="submit">
               <span>Отправить</span>
