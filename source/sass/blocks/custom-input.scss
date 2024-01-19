@@ -1,4 +1,8 @@
-.custom-input {
+.custom-input,
+.custom-textarea {
+  position: relative;
+  width: 100%;
+
   label {
     display: flex;
     flex-direction: column;
