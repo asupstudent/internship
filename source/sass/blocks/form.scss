@@ -2,6 +2,7 @@
   position: relative;
   max-width: 510px;
   width: 100%;
+  height: fit-content;
   padding: 53px 80px;
   border-radius: 16px;
   display: flex;
@@ -103,4 +104,8 @@
       margin-bottom: 25px;
     }
   }
+}
+
+.form__btn {
+  align-self: center;
 }
