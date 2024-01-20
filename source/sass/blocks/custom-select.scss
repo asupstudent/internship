@@ -160,8 +160,6 @@ select {
 
   svg {
     color: $color-transparent;
-    transform: rotate(180deg);
-    transition: transform $trans-default;
   }
 }
 
@@ -232,6 +230,7 @@ select {
 
   .custom-select__icon {
     transform: rotate(180deg);
+    transition: transform $trans-default;
   }
 }
 
