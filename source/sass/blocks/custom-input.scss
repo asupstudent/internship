@@ -6,7 +6,7 @@
   label {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
   }
 
   span {
@@ -25,7 +25,6 @@
   input,
   textarea {
     width: 100%;
-    padding: 11px 25px;
     font-size: 18px;
     line-height: 18px;
     border-radius: 8px;
@@ -35,11 +34,14 @@
   }
 
   input {
-    min-height: 50px;
+    padding: 12px 25px;
+    min-height: 48px;
   }
 
   textarea {
+    padding: 16px 25px;
     min-height: 98px;
+    resize: none;
 
     @include vp-767 {
       min-height: 94px;
@@ -108,7 +110,7 @@
     }
 
     @include vp-767 {
-      gap: 4px;
+      gap: 6px;
     }
   }
 
@@ -134,7 +136,7 @@
 
   input {
     @include vp-767 {
-      min-height: 44px;
+      min-height: 42px;
     }
   }
 }
