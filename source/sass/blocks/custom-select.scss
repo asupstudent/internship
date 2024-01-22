@@ -206,7 +206,8 @@ select {
   cursor: pointer;
   outline: none;
 
-  &:active {
+  &:active,
+  &:focus {
     color: $color-white;
     background-color: $color-cerulean-blue;
   }

@@ -201,7 +201,7 @@
       </section>
     </header>
     <main>
-      <section data-test="about container" id="about">
+      <section class="about container" data-test="about" id="about">
         <div class="about__wrapper">
           <div class="about__intro">
             <h2>О проекте «Стажировка»</h2>
@@ -209,7 +209,7 @@
           </div>
           <div class="about__content">
             <h3>Наша цель</h3>
-            <p>Наша деятельность направлена на повышение квалификации молодых специалистов на ранних и средних стадиях карьеры, предоставляя им инструменты для решения сложных проблем,  с которыми сталкиваются в мире. Цель центра — наделить этих людей способностью инициировать значимые изменения.</p>
+            <p>Наша деятельность направлена на&nbsp;повышение квалификации молодых специалистов на ранних и средних стадиях карьеры, предоставляя им&nbsp;инструменты для решения сложных проблем,  с&nbsp;которыми сталкиваются в мире. Цель центра — наделить этих людей способностью инициировать значимые изменения.</p>
             <a class="about__btn btn btn--primary" href="#" data-open-modal="about">
               <span>Подробнее о проекте</span>
               <div class="btn__icon">
@@ -256,7 +256,7 @@
         </button>
         <h2>Напишите нам</h2>
         <p>Оставьте ваши контакты, если&nbsp;у&nbsp;вас&nbsp;остались вопросы &mdash; мы&nbsp;на&nbsp;них ответим!</p>
-        <form action="https://echo.htmlacademy.ru/" method="post">
+        <form action="https://echo.htmlacademy.ru/" method="post" data-form="form">
           <div class="custom-input custom-input--secondary" data-required data-validate-type="text" data-limitation="letters-and-digit">
             <label>
               <span>Имя</span>
@@ -280,6 +280,7 @@
               </div>
             </button>
             <ul class="custom-select__list custom-select__list--secondary" role="listbox">
+              <li class="custom-select__item" tabindex="0" data-select-value="empty" aria-selected="false" role="option"></li>
               <li class="custom-select__item" tabindex="0" data-select-value="kulebaki" aria-selected="false" role="option">Кулебаки</li>
               <li class="custom-select__item" tabindex="0" data-select-value="murom" aria-selected="false" role="option">Муром</li>
               <li class="custom-select__item" tabindex="0" data-select-value="arzamas" aria-selected="false" role="option">Арзамас</li>
