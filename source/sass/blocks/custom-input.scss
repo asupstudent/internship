@@ -42,6 +42,7 @@
     padding: 16px 25px;
     min-height: 98px;
     resize: none;
+    appearance: none;
 
     @include vp-767 {
       min-height: 94px;

@@ -68,6 +68,7 @@
   background-color: $color-transparent;
   border: none;
   cursor: pointer;
+  appearance: none;
 
   @include vp-767 {
     top: 20px;
