@@ -2,6 +2,7 @@ import './utils/scroll-lock';
 import './utils/focus-lock';
 import {CustomSelect} from './vendor/custom-select/custom-select';
 import {initAutoResizeTextarea} from './vendor/auto-resize-textarea';
+import {StickyHeader} from './vendor/sticky-header';
 import {Form} from './vendor/form-validate/form';
 import {initBurgerMenu} from './modules/init-burger-menu';
 import {initAccordions} from './modules/init-accordions';
@@ -13,6 +14,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('load', () => {
     initBurgerMenu();
+    const stickyHeader = new StickyHeader();
+    stickyHeader.init();
     initAccordions();
     initModals();
 

@@ -3,16 +3,21 @@
 }
 
 .header__main-nav {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: auto;
   padding-top: 30px;
   background-color: $color-transparent;
   z-index: 2;
+  transition: transform $trans-default;
 
   @include vp-767 {
     padding-top: 20px;
   }
+}
+
+.header__main-nav.is-hidden {
+  transform: translateY(-100%);
 }
 
 .header__logo {
