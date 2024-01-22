@@ -11,11 +11,11 @@ import {initSliderHero} from './modules/init-slider-hero';
 
 window.addEventListener('DOMContentLoaded', () => {
   initSliderHero();
+  const stickyHeader = new StickyHeader();
+  stickyHeader.init();
 
   window.addEventListener('load', () => {
     initBurgerMenu();
-    const stickyHeader = new StickyHeader();
-    stickyHeader.init();
     initAccordions();
     initModals();
 

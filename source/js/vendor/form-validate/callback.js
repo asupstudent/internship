@@ -10,6 +10,10 @@ const baseSuccessCallback = (event) => {
     body: formData,
   }).then((response) => response.text()).then((data) => {
     document.body.innerHTML = `<pre>${data}</pre>`;
+    window.setTimeout(function(){
+      document.location.href="/";
+  }, 1500);
+
   }).catch(() => {
     document.body.innerHTML = 'Ошибка: не удалось отправить форму на сервер';
   });
