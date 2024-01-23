@@ -39,3 +39,19 @@
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
+
+.show-br-mobile {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.hide-br-mobile {
+  display: block;
+
+  @include vp-767 {
+    display: none;
+  }
+}
