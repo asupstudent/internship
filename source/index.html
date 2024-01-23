@@ -241,6 +241,38 @@
           </ul>
         </div>
       </section>
+      <section class="programs container" data-test="programs" id="programs">
+        <div class="programs__wrapper">
+          <h2>Программы</h2>
+          <a class="about__btn btn btn--primary" href="#" data-open-modal="about">
+            <span>Все программы</span>
+            <div class="btn__icon">
+              <svg width="10" height="10" viewBox="0 0 10 10" role="img" aria-hidden="true" focusable="false">
+                <use href="/__spritemap#sprite-arrow"></use>
+              </svg>
+            </div>
+          </a>
+          <div class="programs__slider swiper">
+            <ul class="programs__list swiper__wrapper">
+              <li class="programs__item swiper__slide">
+                <div class="programs__image">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" width="320" height="568" srcset="./img/content/hero/slide-3-mobile@1x.webp 1x, ./img/content/hero/slide-3-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1439px)" width="768" height="1024" srcset="./img/content/hero/slide-3-tablet@1x.webp 1x, ./img/content/hero/slide-3-tablet@2x.webp 2x">
+                    <source type="image/webp" width="1440" height="800" srcset="./img/content/hero/slide-3-desktop@1x.webp 1x, ./img/content/hero/slide-3-desktop@2x.webp 2x">
+                    <source type="image/jpeg" media="(max-width: 767px)" width="320" height="568" srcset="./img/content/hero/slide-3-mobile@1x.jpg 1x, ./img/content/hero/slide-3-mobile@2x.jpg 2x">
+                    <source type="image/jpeg" media="(max-width: 1439px)" width="768" height="1024" srcset="./img/content/hero/slide-3-tablet@1x.jpg 1x, ./img/content/hero/slide-3-tablet@2x.jpg 2x">
+                    <img src="./img/content/hero/slide-3-desktop@1x.jpg" width="1440" height="800" srcset="./img/content/hero/slide-3-desktop@2x.jpg 2x" alt="Стажеры обсуждают поставленную задачу.">
+                  </picture>
+                </div>
+                <div class="programs__content">
+
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
     </footer>
