@@ -224,10 +224,37 @@
   }
 }
 
+.btn--programs {
+  padding: 0;
+  border: none;
+  justify-content: center;
+  gap: 0;
+  border-radius: 44px;
+  width: 30px;
+  height: 30px;
+
+  &:hover {
+    background-color: $color-white;
+  }
+
+  &:active {
+    background-color: $color-white;
+  }
+
+  .btn__icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.btn--programs.is-disabled {
+  border: none;
+}
+
 .btn__icon {
   width: 46px;
   height: 46px;
-  border-radius: 50%;
+  border-radius: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
