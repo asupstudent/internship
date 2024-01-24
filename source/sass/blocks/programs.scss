@@ -47,6 +47,13 @@
 .programs__slider {
   width: 100%;
   grid-column: 1/-1;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  @include vp-767 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }
 
 .programs__list {
@@ -55,20 +62,105 @@
   list-style: none;
 }
 
-// .programs__item {
-//   width: 324px;
+.programs__item {
+  position: relative;
+  max-width: 392px;
+  min-height: 420px;
+  height: auto;
+  border-radius: 12px;
+  padding: 0 51px 20px 20px;
+  background-color: $color-cerulean-blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 
-//   @include vp-767 {
-//     width: 100%;
-//   }
-// }
+  @include vp-1439 {
+    max-width: 324px;
+    padding-right: 41px;
+  }
+
+  @include vp-767 {
+    max-width: 290px;
+    min-height: 400px;
+    padding: 0 10px 18px;
+  }
+}
+
+.programs__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.programs__content h3 {
+  @include angle;
+
+  padding: 18px 18px 6px;
+  margin: 0;
+  background-color: $color-white;
+  border-radius: 12px 12px 0 0;
+  width: fit-content;
+  min-width: 194px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+  color: $color-cerulean-blue;
+
+  &::after {
+    width: 18px;
+    height: 18px;
+    right: -18px;
+    bottom: 0;
+  }
+
+  @include vp-1439 {
+    min-width: 173px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @include vp-767 {
+    min-width: 146px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.programs__container {
+  border-radius: 0 12px 12px;
+  background-color: $color-white;
+}
+
+.programs__image {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: $color-cerulean-blue-20;
+    border-radius: 12px;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+}
 
 .programs__scrollbar {
   position: relative;
   height: 2px;
-  grid-column: 1/-1;
-  width: 100%;
-  max-width: 1134px;
+  grid-column: 1/-2;
+  width: calc(100% - 52px);
   background-color: $color-cerulean-blue-20;
 
   @include vp-1439 {
