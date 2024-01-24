@@ -8,11 +8,13 @@ import {initBurgerMenu} from './modules/init-burger-menu';
 import {initAccordions} from './modules/init-accordions';
 import {initModals} from './modules/init-modals';
 import {initSliderHero} from './modules/init-slider-hero';
+import {initSliderPrograms} from './modules/init-slider-programs';
 
 window.addEventListener('DOMContentLoaded', () => {
-  initSliderHero();
   const stickyHeader = new StickyHeader();
   stickyHeader.init();
+  initSliderHero();
+  initSliderPrograms();
 
   window.addEventListener('load', () => {
     initBurgerMenu();

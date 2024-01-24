@@ -252,9 +252,9 @@
               </svg>
             </div>
           </a>
-          <div class="programs__slider swiper">
-            <ul class="programs__list swiper__wrapper">
-              <li class="programs__item swiper__slide">
+          <div class="programs__slider swiper" data-swiper="programs">
+            <ul class="programs__list swiper-wrapper">
+              <li class="programs__item swiper-slide">
                 <div class="programs__image">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" width="290" height="400" srcset="./img/content/programs/slide-1-mobile@1x.webp 1x, ./img/content/programs/slide-1-mobile@2x.webp 2x">
@@ -279,7 +279,7 @@
                   </div>
                 </div>
               </li>
-              <li class="programs__item swiper__slide">
+              <li class="programs__item swiper-slide">
                 <div class="programs__image">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" width="290" height="400" srcset="./img/content/programs/slide-2-mobile@1x.webp 1x, ./img/content/programs/slide-2-mobile@2x.webp 2x">
@@ -304,7 +304,7 @@
                   </div>
                 </div>
               </li>
-              <li class="programs__item swiper__slide">
+              <li class="programs__item swiper-slide">
                 <div class="programs__image">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" width="290" height="400" srcset="./img/content/programs/slide-3-mobile@1x.webp 1x, ./img/content/programs/slide-3-mobile@2x.webp 2x">
@@ -329,7 +329,7 @@
                   </div>
                 </div>
               </li>
-              <li class="programs__item swiper__slide">
+              <li class="programs__item swiper-slide">
                 <div class="programs__image">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" width="290" height="400" srcset="./img/content/programs/slide-1-mobile@1x.webp 1x, ./img/content/programs/slide-1-mobile@2x.webp 2x">
@@ -354,7 +354,7 @@
                   </div>
                 </div>
               </li>
-              <li class="programs__item swiper__slide">
+              <li class="programs__item swiper-slide">
                 <div class="programs__image">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" width="290" height="400" srcset="./img/content/programs/slide-2-mobile@1x.webp 1x, ./img/content/programs/slide-2-mobile@2x.webp 2x">
@@ -379,7 +379,7 @@
                   </div>
                 </div>
               </li>
-              <li class="programs__item swiper__slide">
+              <li class="programs__item swiper-slide">
                 <div class="programs__image">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" width="290" height="400" srcset="./img/content/programs/slide-3-mobile@1x.webp 1x, ./img/content/programs/slide-3-mobile@2x.webp 2x">
@@ -406,16 +406,16 @@
               </li>
             </ul>
           </div>
-          <div class="programs__scrollbar"></div>
+          <div class="programs__scrollbar" data-swiper="programs-scrollbar"></div>
           <div class="programs__slider-buttons">
-            <button class="btn btn--secondary btn--slider btn--slider-prev" type="button" aria-label="Предыдущий слайд.">
+            <button class="btn btn--secondary btn--slider btn--slider-prev" type="button" aria-label="Предыдущий слайд." data-swiper="programs-button-prev">
               <div class="btn__icon">
                 <svg width="10" height="10" viewBox="0 0 10 10" role="img" aria-hidden="true" focusable="false">
                   <use href="/__spritemap#sprite-arrow"></use>
                 </svg>
               </div>
             </button>
-            <button class="btn btn--secondary btn--slider" type="button" aria-label="Следующий слайд.">
+            <button class="btn btn--secondary btn--slider" type="button" aria-label="Следующий слайд." data-swiper="programs-button-next">
               <div class="btn__icon">
                 <svg width="10" height="10" viewBox="0 0 10 10" role="img" aria-hidden="true" focusable="false">
                   <use href="/__spritemap#sprite-arrow"></use>
