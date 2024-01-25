@@ -34,6 +34,7 @@ const setSliderPrograms = () => {
       },
       320: {
         slidesPerView: 1,
+        spaceBetween: 15,
         scrollbar: {
           el: '',
           enabled: false,
