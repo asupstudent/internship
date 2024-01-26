@@ -9,12 +9,14 @@ import {initAccordions} from './modules/init-accordions';
 import {initModals} from './modules/init-modals';
 import {initSliderHero} from './modules/init-slider-hero';
 import {initSliderPrograms} from './modules/init-slider-programs';
+import {initSliderNews} from './modules/init-slider-news';
 
 window.addEventListener('DOMContentLoaded', () => {
   const stickyHeader = new StickyHeader();
   stickyHeader.init();
   initSliderHero();
   initSliderPrograms();
+  initSliderNews();
 
   window.addEventListener('load', () => {
     initBurgerMenu();

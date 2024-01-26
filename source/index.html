@@ -408,14 +408,14 @@
           </div>
           <div class="programs__scrollbar" data-swiper="programs-scrollbar"></div>
           <div class="programs__slider-buttons">
-            <button class="btn btn--secondary btn--slider btn--slider-prev" type="button" aria-label="Предыдущий слайд." data-swiper="programs-button-prev">
+            <button class="btn btn--secondary btn--slider-programs btn--slider-programs-prev" type="button" aria-label="Предыдущий слайд." data-swiper="programs-button-prev">
               <div class="btn__icon">
                 <svg width="10" height="10" viewBox="0 0 10 10" role="img" aria-hidden="true" focusable="false">
                   <use href="/__spritemap#sprite-arrow"></use>
                 </svg>
               </div>
             </button>
-            <button class="btn btn--secondary btn--slider" type="button" aria-label="Следующий слайд." data-swiper="programs-button-next">
+            <button class="btn btn--secondary btn--slider-programs" type="button" aria-label="Следующий слайд." data-swiper="programs-button-next">
               <div class="btn__icon">
                 <svg width="10" height="10" viewBox="0 0 10 10" role="img" aria-hidden="true" focusable="false">
                   <use href="/__spritemap#sprite-arrow"></use>
@@ -458,7 +458,7 @@
           </div>
         </div>
       </section>
-      <section data-test="news container container--news" id="news">
+      <section class="news container container--news" data-test="news" id="news">
         <h2>Новости и материалы</h2>
         <div class="news__tab-buttons">
           <ul aria-label="Список новостей">
@@ -479,9 +479,9 @@
             </li>
           </ul>
         </div>
-        <div class="news__slider swiper">
-          <ul class="news__list swiper__wrapper">
-            <li class="news__item swiper__slide">
+        <div class="news__slider swiper" data-swiper="news">
+          <ul class="news__list swiper-wrapper">
+            <li class="news__item swiper-slide">
               <article>
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" width="290" height="330" srcset="./img/content/news/slide-1-mobile@1x.webp 1x, ./img/content/news/slide-1-mobile@2x.webp 2x">
@@ -501,7 +501,7 @@
                 </picture>
               </article>
             </li>
-            <li class="news__item swiper__slide">
+            <li class="news__item swiper-slide">
               <article>
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" width="290" height="330" srcset="./img/content/news/slide-2-mobile@1x.webp 1x, ./img/content/news/slide-2-mobile@2x.webp 2x">
@@ -521,7 +521,7 @@
                 </picture>
               </article>
             </li>
-            <li class="news__item swiper__slide">
+            <li class="news__item swiper-slide">
               <article>
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" width="290" height="330" srcset="./img/content/news/slide-3-mobile@1x.webp 1x, ./img/content/news/slide-3-mobile@2x.webp 2x">
@@ -541,7 +541,7 @@
                 </picture>
               </article>
             </li>
-            <li class="news__item swiper__slide">
+            <li class="news__item swiper-slide">
               <article>
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" width="290" height="330" srcset="./img/content/news/slide-4-mobile@1x.webp 1x, ./img/content/news/slide-4-mobile@2x.webp 2x">
@@ -562,6 +562,23 @@
               </article>
             </li>
           </ul>
+        </div>
+        <div class="news__swiper-controls">
+          <button class="btn btn--secondary btn--slider-news btn--slider-news-prev" type="button" aria-label="Предыдущий слайд." data-swiper="news-button-prev">
+            <div class="btn__icon">
+              <svg width="10" height="10" viewBox="0 0 10 10" role="img" aria-hidden="true" focusable="false">
+                <use href="/__spritemap#sprite-arrow"></use>
+              </svg>
+            </div>
+          </button>
+          <div class="news__pagination" data-swiper="news-pagination"></div>
+          <button class="btn btn--secondary btn--slider-news" type="button" aria-label="Следующий слайд." data-swiper="news-button-next">
+            <div class="btn__icon">
+              <svg width="10" height="10" viewBox="0 0 10 10" role="img" aria-hidden="true" focusable="false">
+                <use href="/__spritemap#sprite-arrow"></use>
+              </svg>
+            </div>
+          </button>
         </div>
       </section>
     </main>

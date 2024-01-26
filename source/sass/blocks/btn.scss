@@ -252,7 +252,8 @@
   border: none;
 }
 
-.btn--slider {
+.btn--slider-programs,
+.btn--slider-news {
   padding: 0;
   border: none;
   width: 22px;
@@ -287,7 +288,8 @@
   }
 }
 
-.btn--slider-prev {
+.btn--slider-programs-prev,
+.btn--slider-news-prev {
   &:hover,
   &:active {
     svg {
