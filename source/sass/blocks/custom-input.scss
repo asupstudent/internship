@@ -6,7 +6,6 @@
   label {
     display: flex;
     flex-direction: column;
-    gap: 8px;
   }
 
   span {
@@ -40,7 +39,7 @@
 
   textarea {
     padding: 16px 25px;
-    min-height: 98px;
+    min-height: 96px;
     resize: none;
     appearance: none;
 
@@ -60,6 +59,8 @@
 
 .custom-input--primary {
   label {
+    gap: 9px;
+
     &:focus-within span {
       color: $color-alabaster;
     }
@@ -75,6 +76,7 @@
   }
 
   span {
+    margin-left: -1px;
     line-height: 18px;
     color: $color-alabaster-80;
 
@@ -97,6 +99,8 @@
 
 .custom-input--secondary {
   label {
+    gap: 8px;
+
     &:focus-within span {
       color: $color-charcoal;
     }

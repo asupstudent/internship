@@ -9,7 +9,6 @@
     position: relative;
     width: 100%;
     display: flex;
-    align-items: center;
     gap: 10px;
   }
 
@@ -33,17 +32,13 @@
   svg {
     position: absolute;
     display: none;
-    top: 6px;
     left: 5px;
     width: 10px;
     height: 8px;
-
-    @include vp-767 {
-      top: 8px;
-    }
   }
 
   span {
+    margin-top: 4px;
     cursor: pointer;
   }
 }
@@ -88,6 +83,9 @@
 }
 
 .custom-toggle--primary {
+  margin-top: 4px;
+  margin-left: -1px;
+
   div {
     border: 1px solid $color-white-70;
     background-color: $color-cerulean-blue;
@@ -103,6 +101,7 @@
   }
 
   input:checked ~ svg {
+    top: 6px;
     display: block;
     stroke: $color-cerulean-blue;
   }
@@ -137,14 +136,17 @@
 
 .custom-toggle--secondary {
   div {
+    margin-top: 3px;
     border: 1px solid $color-cerulean-blue-70;
     background-color: $color-white;
   }
 
   span {
+    align-self: center;
     color: $color-charcoal-90;
 
     @include vp-767 {
+      margin-top: 0;
       line-height: 14px;
     }
   }
@@ -159,6 +161,7 @@
   }
 
   input:checked ~ svg {
+    top: 9px;
     display: block;
     stroke: $color-white;
   }
