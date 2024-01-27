@@ -20,8 +20,21 @@ const setSliderNews = () => {
       nextEl: buttonNext,
       prevEl: buttonPrev,
     },
-    slidesPerView: 3,
-    spaceBetween: 32,
+    breakpoints: {
+      1440: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+      320: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 20,
+      },
+    },
   });
 };
 

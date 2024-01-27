@@ -22,6 +22,7 @@
 
     @include vp-767 {
       margin-bottom: 24px;
+      padding-right: 15px;
     }
   }
 }
@@ -88,6 +89,51 @@
     font-size: 12px;
     line-height: 12px;
     letter-spacing: 0.24px;
+  }
+}
+
+.news__slider {
+  margin-bottom: 40px;
+
+  @include vp-1439 {
+    margin-bottom: 30px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 24px;
+    padding-right: 15px;
+  }
+}
+
+.news__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.news__item {
+  picture + picture {
+    display: none;
+  }
+}
+
+.news__item.swiper-slide-active {
+  picture {
+    display: none;
+  }
+
+  picture + picture {
+    display: block;
+  }
+
+  @include vp-1439 {
+    picture {
+      display: block;
+    }
+
+    picture + picture {
+      display: none;
+    }
   }
 }
 
