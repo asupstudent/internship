@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import {Grid, Navigation, Pagination } from 'swiper/modules';
 
 const newsSlider = document.querySelector('[data-swiper="news"]');
 const buttonPrev = document.querySelector('[data-swiper="news-button-prev"]');
@@ -8,7 +8,7 @@ const newsPagination = document.querySelector('[data-swiper="news-pagination"]')
 
 const setSliderNews = () => {
   new Swiper(newsSlider, {
-    modules: [Navigation, Pagination],
+    modules: [Grid, Navigation, Pagination],
     pagination: {
       el: newsPagination,
       clickable: true,
@@ -22,17 +22,22 @@ const setSliderNews = () => {
     },
     breakpoints: {
       1440: {
-        slidesPerView: 3,
+        slidesPerView: 'auto',
         spaceBetween: 32,
       },
       768: {
-        slidesPerView: 4,
+        slidesPerView: 'auto',
         spaceBetween: 30,
+        grid: {
+          rows: 2,
+        },
       },
       320: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
+        slidesPerView: 'auto',
         spaceBetween: 20,
+        grid: {
+          rows: 2,
+        },
       },
     },
   });
