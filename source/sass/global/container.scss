@@ -21,4 +21,10 @@
       padding: 0 15px;
     }
   }
+
+  &--news {
+    @include vp-767 {
+      padding-right: 0;
+    }
+  }
 }
