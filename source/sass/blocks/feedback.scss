@@ -41,8 +41,20 @@
 
 .feedback__custom-select {
   margin-top: 4px;
+
+  @include vp-1439 {
+    margin-top: -1px;
+  }
+
+  @include vp-767 {
+    margin-top: 2px;
+  }
 }
 
 .feedback__form-btn {
   margin-top: 23px;
+
+  @include vp-767 {
+    margin-top: 0;
+  }
 }

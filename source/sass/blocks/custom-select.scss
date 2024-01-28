@@ -33,6 +33,14 @@
 .custom-select--primary {
   gap: 13px;
 
+  @include vp-1439 {
+    gap: 8px;
+  }
+
+  @include vp-767 {
+    gap: 12px;
+  }
+
   &:hover {
     .custom-select__button {
       outline: 1px solid $color-white;

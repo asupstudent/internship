@@ -93,6 +93,11 @@
 
   span {
     color: $color-white-90;
+
+    @include vp-767 {
+      margin-top: -3px;
+      line-height: 14px;
+    }
   }
 
   input:checked + div {
@@ -107,7 +112,8 @@
   }
 
   @include vp-767 {
-    margin-bottom: 14px;
+    margin-top: 5px;
+    margin-bottom: 9px;
   }
 }
 
