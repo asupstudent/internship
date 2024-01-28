@@ -3,7 +3,8 @@
   position: relative;
   width: 100%;
 
-  label {
+  label,
+  .custom-input__wrapper {
     display: flex;
     flex-direction: column;
   }
@@ -58,7 +59,8 @@
 }
 
 .custom-input--primary {
-  label {
+  label,
+  .custom-input__wrapper {
     gap: 9px;
 
     @include vp-767 {
@@ -102,7 +104,8 @@
 }
 
 .custom-input--secondary {
-  label {
+  label,
+  .custom-input__wrapper {
     gap: 8px;
 
     &:focus-within span {
