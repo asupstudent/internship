@@ -21,6 +21,10 @@ const setSliderNews = () => {
       prevEl: buttonPrev,
     },
     slidesPerView: 'auto',
+    spaceBetween: 20,
+    grid: {
+      rows: 1,
+    },
     breakpoints: {
       1440: {
         spaceBetween: 32,
@@ -37,7 +41,7 @@ const setSliderNews = () => {
       320: {
         spaceBetween: 20,
         grid: {
-          rows: 2,
+          rows: 1,
         },
       },
     },

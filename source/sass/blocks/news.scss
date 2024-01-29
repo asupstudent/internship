@@ -13,7 +13,8 @@
   h2 {
     @include title;
 
-    margin-bottom: 40px;
+    padding-top: 4px;
+    margin-bottom: 44px;
     text-align: center;
 
     @include vp-1439 {
@@ -28,7 +29,7 @@
 }
 
 .news__tab-buttons {
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 
   @include vp-1439 {
     margin-bottom: 30px;
@@ -111,39 +112,92 @@
   list-style: none;
 
   @include vp-1439 {
-    max-height: 730px;
+    height: 75vw;
+  }
+
+  @include vp-1023 {
+    height: 95vw;
   }
 
   @include vp-767 {
-    max-height: 590px;
+    height: 113vw;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    row-gap: 20px;
+  }
+
+  @include vp-479 {
+    height: 184.38vw;
+  }
+
+  @include vp-319 {
+    min-height: 330px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 0;
   }
 }
 
 .news__item {
   max-width: 286px;
-  min-height: 400px;
-  height: auto;
+  overflow: hidden;
 
   .news__image + .news__image {
     display: none;
   }
 
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 400px;
+
+    @include vp-1439 {
+      min-height: 100%;
+    }
+  }
+
+  .news__wrapper {
+    max-width: 256px;
+
+    @include vp-767 {
+      max-width: 279px;
+    }
+  }
+
   @include vp-1439 {
     max-width: 324px;
-    min-height: 350px;
   }
 
   @include vp-767 {
     max-width: 290px;
-    min-height: 330px;
+    height: 54vw;
 
     &:nth-child(2n) {
-      min-height: 240px;
+      height: 54vw;
+    }
+  }
+
+  @include vp-479 {
+    height: 103vw;
+
+    &:nth-child(2n) {
+      height: 75vw;
+    }
+  }
+
+  @include vp-319 {
+    height: 100%;
+
+    &:nth-child(2n) {
+      height: 100%;
     }
   }
 }
 
-.news__item.swiper-slide-active {
+.news__item.swiper-slide-active,
+.news__item.swiper-slide-prev {
   max-width: 604px;
 
   .news__image {
@@ -152,6 +206,18 @@
 
   .news__image + .news__image {
     display: block;
+  }
+
+  .news__wrapper {
+    max-width: 405px;
+
+    @include vp-1439 {
+      max-width: 256px;
+    }
+
+    @include vp-767 {
+      max-width: 279px;
+    }
   }
 
   @include vp-1439 {
@@ -171,10 +237,17 @@
   }
 }
 
+.news__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .news__image {
   position: absolute;
   inset: 0;
   z-index: -1;
+  border-radius: 12px;
+  background-color: $color-mischka;
 
   img {
     display: block;
@@ -182,6 +255,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 12px;
   }
 }
 
@@ -197,6 +271,7 @@
 
 .news__pagination {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 
   .swiper-pagination-bullet {

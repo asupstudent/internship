@@ -224,7 +224,8 @@
   }
 }
 
-.btn--programs {
+.btn--programs,
+.btn--news {
   padding: 0;
   border: none;
   justify-content: center;
@@ -248,6 +249,7 @@
 }
 
 .btn--programs.is-disabled,
+.btn--news.is-disabled,
 .btn--slider.is-disabled {
   border: none;
 }
