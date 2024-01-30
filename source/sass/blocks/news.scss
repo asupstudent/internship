@@ -112,36 +112,21 @@
   list-style: none;
 
   @include vp-1439 {
-    height: 75vw;
-  }
-
-  @include vp-1023 {
-    height: 95vw;
+    height: 730px;
   }
 
   @include vp-767 {
-    height: 113vw;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    row-gap: 20px;
-  }
-
-  @include vp-479 {
-    height: 184.38vw;
+    height: 590px;
   }
 
   @include vp-319 {
-    min-height: 330px;
-    flex-direction: column;
-    flex-wrap: wrap;
-    row-gap: 0;
+    height: 330px;
   }
 }
 
 .news__item {
-  max-width: 286px;
-  overflow: hidden;
+  width: 286px;
+  height: 400px;
 
   .news__image + .news__image {
     display: none;
@@ -151,11 +136,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    min-height: 400px;
-
-    @include vp-1439 {
-      min-height: 100%;
-    }
+    height: 100%;
   }
 
   .news__wrapper {
@@ -167,38 +148,34 @@
   }
 
   @include vp-1439 {
-    max-width: 324px;
+    width: 324px;
+    height: 350px;
   }
 
   @include vp-767 {
-    max-width: 290px;
-    height: 54vw;
+    width: 290px;
+    min-height: 330px;
 
     &:nth-child(2n) {
-      height: 54vw;
-    }
-  }
-
-  @include vp-479 {
-    height: 103vw;
-
-    &:nth-child(2n) {
-      height: 75vw;
+      min-height: 240px;
+      max-height: 240px;
     }
   }
 
   @include vp-319 {
-    height: 100%;
+    max-height: 330px;
+    min-height: 330px;
 
     &:nth-child(2n) {
-      height: 100%;
+      max-height: 330px;
+      min-height: 330px;
     }
   }
 }
 
 .news__item.swiper-slide-active,
 .news__item.swiper-slide-prev {
-  max-width: 604px;
+  width: 604px;
 
   .news__image {
     display: none;
@@ -221,7 +198,7 @@
   }
 
   @include vp-1439 {
-    max-width: 324px;
+    width: 324px;
 
     .news__image {
       display: block;
@@ -233,13 +210,23 @@
   }
 
   @include vp-767 {
-    max-width: 290px;
+    width: 290px;
   }
 }
 
 .news__wrapper {
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+  max-height: 400px;
+
+  @include vp-1439 {
+    max-height: 350px;
+  }
+
+  @include vp-767 {
+    max-height: 330px;
+  }
 }
 
 .news__image {
