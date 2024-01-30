@@ -10,6 +10,7 @@ import {initModals} from './modules/init-modals';
 import {initSliderHero} from './modules/init-slider-hero';
 import {initSliderPrograms} from './modules/init-slider-programs';
 import {initSliderNews} from './modules/init-slider-news';
+import {initSliderReviews} from './modules/init-slider-reviews';
 
 window.addEventListener('DOMContentLoaded', () => {
   const stickyHeader = new StickyHeader();
@@ -17,6 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initSliderHero();
   initSliderPrograms();
   initSliderNews();
+  initSliderReviews();
 
   window.addEventListener('load', () => {
     initBurgerMenu();

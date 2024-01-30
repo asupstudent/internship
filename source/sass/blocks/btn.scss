@@ -225,7 +225,8 @@
 }
 
 .btn--programs,
-.btn--news {
+.btn--news,
+.btn--reviews {
   padding: 0;
   border: none;
   justify-content: center;
@@ -250,12 +251,14 @@
 
 .btn--programs.is-disabled,
 .btn--news.is-disabled,
-.btn--slider.is-disabled {
+.btn--slider.is-disabled,
+.btn--reviews.is-disabled {
   border: none;
 }
 
 .btn--slider-programs,
-.btn--slider-news {
+.btn--slider-news,
+.btn--slider-reviews {
   padding: 0;
   border: none;
   width: 22px;
@@ -291,7 +294,8 @@
 }
 
 .btn--slider-programs-prev,
-.btn--slider-news-prev {
+.btn--slider-news-prev,
+.btn--slider-reviews-prev {
   &:hover,
   &:active {
     svg {
