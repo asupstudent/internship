@@ -215,10 +215,23 @@
 }
 
 .news__wrapper {
+  @include angle;
+
   display: flex;
   flex-direction: column;
+  padding-top: 16px;
   overflow-y: auto;
   max-height: 400px;
+  height: fit-content;
+  background-color: $color-transparent;
+
+  &::after {
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    background-color: $color-alabaster;
+  }
 
   @include vp-1439 {
     max-height: 350px;
@@ -228,6 +241,81 @@
     max-height: 330px;
   }
 }
+
+.news__wrapper time {
+  @include angle;
+
+  padding: 12px 12px 6px 0;
+  width: fit-content;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+  color: $color-cerulean-blue;
+  background-color: $color-alabaster;
+  border-radius: 0 12px 0 0;
+
+  &::after {
+    width: 16px;
+    height: 16px;
+    bottom: 0;
+    right: -16px;
+    background-color: $color-alabaster;
+  }
+}
+
+.news__wrapper h3 {
+  @include angle;
+
+  margin: 0 16px 0 0;
+  padding: 10px 18px 4px 0;
+  width: fit-content;
+  max-width: 214px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+  color: $color-cerulean-blue;
+  background-color: $color-alabaster;
+  border-radius: 0 12px 0 0;
+
+  &::after {
+    width: 16px;
+    height: 16px;
+    bottom: 0;
+    right: -16px;
+    background-color: $color-alabaster;
+  }
+
+  @include vp-1439 {
+    max-width: 207px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @include vp-767 {
+    max-width: 200px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.news__item.swiper-slide-active .news__wrapper h3,
+.news__item.swiper-slide-prev .news__wrapper h3 {
+  max-width: 291px;
+  padding: 18px 18px 6px 0;
+
+  @include vp-1439 {
+    max-width: 207px;
+    padding: 10px 18px 6px 0;
+  }
+
+  @include vp-767 {
+    max-width: 200px;
+    padding-bottom: 4px;
+  }
+}
+
 
 .news__image {
   position: absolute;
