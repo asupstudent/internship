@@ -8,6 +8,7 @@
   }
 
   @include vp-767 {
+    margin-top: 62px;
     margin-bottom: 60px;
   }
 
@@ -24,7 +25,7 @@
     }
 
     @include vp-767 {
-      margin-bottom: 24px;
+      margin-bottom: 25px;
       padding-right: 15px;
     }
   }
@@ -39,7 +40,7 @@
   }
 
   @include vp-767 {
-    margin: 0 0 24px;
+    margin: 0 0 17px;
     overflow-x: auto;
   }
 
@@ -312,6 +313,9 @@ ul li:last-child .news__tab-button {
   }
 
   @include vp-767 {
+    padding-top: 10px;
+    padding-bottom: 4px;
+    padding-right: 24px;
     max-width: 200px;
     font-size: 16px;
     line-height: 18px;
@@ -330,6 +334,7 @@ ul li:last-child .news__tab-button {
 
   @include vp-767 {
     max-width: 200px;
+    padding-top: 10px;
     padding-bottom: 4px;
   }
 }
@@ -373,6 +378,8 @@ ul li:last-child .news__tab-button {
     }
 
     @include vp-767 {
+      margin-top: 2px;
+      padding-right: 10px;
       font-size: 12px;
       line-height: 14px;
     }
@@ -380,6 +387,26 @@ ul li:last-child .news__tab-button {
 
   .news__info-btn {
     align-self: center;
+  }
+}
+
+.news__item.swiper-slide-active .news__info,
+.news__item.swiper-slide-prev .news__info {
+  p {
+    @include vp-767 {
+      margin-top: 0;
+    }
+  }
+
+  @include vp-767 {
+    padding: 13px 10px 9px 0;
+  }
+}
+
+.news__item.swiper-slide-active .news__info .news__info-btn,
+.news__item.swiper-slide-prev .news__info .news__info-btn {
+  @include vp-767 {
+    margin-top: -2px;
   }
 }
 
@@ -408,6 +435,11 @@ ul li:last-child .news__tab-button {
   @include vp-1439 {
     padding-left: 19px;
     padding-right: 19px;
+  }
+
+  @include vp-767 {
+    margin-left: 1px;
+    padding: 9px 13px 6px 14px;
   }
 }
 
