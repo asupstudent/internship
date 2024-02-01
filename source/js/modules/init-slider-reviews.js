@@ -10,6 +10,7 @@ const setSliderReviews = () => {
   new Swiper(sliderReviews, {
     modules: [Scrollbar, Navigation],
     keyboard: true,
+    spaceBetween: 20,
     scrollbar: {
       el: scrollbar,
       draggable: true,
@@ -34,6 +35,7 @@ const setSliderReviews = () => {
       },
       320: {
         slidesPerView: 1,
+        spaceBetween: 30,
         scrollbar: {
           el: '',
           enabled: false,
