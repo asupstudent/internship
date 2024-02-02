@@ -1,5 +1,5 @@
 .contacts {
-  padding-top: 121px;
+  padding-top: 119px;
   padding-bottom: 120px;
   color: $color-white;
   background-color: $color-cerulean-blue;
@@ -30,7 +30,7 @@
   display: grid;
   grid-template-columns: min-content auto;
   justify-content: space-between;
-  padding-bottom: 40px;
+  padding-bottom: 33px;
 
   &::after {
     position: absolute;
@@ -50,6 +50,8 @@
 
   h2 {
     @include title-light;
+
+    margin-top: 5px;
   }
 
   ul {
@@ -59,7 +61,7 @@
     max-width: 604px;
     display: flex;
     grid-column: 2/3;
-    gap: 50px;
+    gap: 54px;
 
     @include vp-1439 {
       max-width: 100%;
@@ -78,11 +80,7 @@
   li {
     display: flex;
     flex-direction: column;
-    row-gap: 24px;
-
-    @include vp-767 {
-      row-gap: 15px;
-    }
+    row-gap: 15px;
   }
 
   li h3 {
