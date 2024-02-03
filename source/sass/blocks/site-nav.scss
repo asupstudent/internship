@@ -12,11 +12,6 @@
   @include vp-767 {
     width: 100%;
   }
-
-  &--footer {
-    display: block;
-    position: static;
-  }
 }
 
 .site-nav.is-menu-opened {
@@ -114,6 +109,67 @@
     &:hover,
     &:focus-visible {
       color: $color-white;
+    }
+  }
+}
+
+.site-nav--footer {
+  display: block;
+  position: static;
+  background-color: $color-transparent;
+  border-radius: 0;
+  padding: 0;
+  width: 100%;
+  z-index: auto;
+
+  .site-nav__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    @include vp-1439 {
+      gap: 16px;
+      justify-content: flex-end;
+    }
+
+    @include vp-767 {
+      justify-content: center;
+      column-gap: 30px;
+      row-gap: 0;
+    }
+  }
+
+  .site-nav__item {
+    flex-shrink: 0;
+  }
+
+  .site-nav__link {
+    color: $color-charcoal;
+    line-height: 26px;
+    text-transform: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    letter-spacing: normal;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-cerulean-blue;
+    }
+
+    &:active {
+      color: $color-endeavour;
+    }
+
+    @include vp-1439 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @include vp-767 {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-size: 14px;
+      line-height: 20px;
     }
   }
 }
