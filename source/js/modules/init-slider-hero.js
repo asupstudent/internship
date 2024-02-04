@@ -5,7 +5,6 @@ const heroSlider = document.querySelector('[data-swiper="hero"]');
 
 const setSliderHero = () => {
   const slider = new Swiper(heroSlider, {
-    observer: true,
     modules: [Autoplay, Pagination],
     pagination: {
       el: '.swiper-slide-active .hero__pagination',
