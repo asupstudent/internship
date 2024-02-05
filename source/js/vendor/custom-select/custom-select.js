@@ -1,6 +1,6 @@
 
-import {createElement, renderElement} from './utils';
-import {createNativeSelectMarkup} from './create-select-markup';
+import { createElement, renderElement } from './utils';
+import { createNativeSelectMarkup } from './create-select-markup';
 
 export class CustomSelect {
   constructor() {
@@ -152,7 +152,7 @@ export class CustomSelect {
     select.dispatchEvent(inputEv);
   }
 
-  _onDocumentClick({target}) {
+  _onDocumentClick({ target }) {
     if (!target.closest('.custom-select')) {
       this._closeSelect();
     }

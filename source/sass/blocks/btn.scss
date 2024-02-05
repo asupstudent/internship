@@ -26,6 +26,14 @@
     width: 100%;
   }
 
+  span + span {
+    width: 46px;
+
+    @include vp-767 {
+      width: 34px;
+    }
+  }
+
   @include vp-767 {
     padding-left: 20px;
     font-size: 12px;
@@ -313,7 +321,6 @@
 }
 
 .btn__icon {
-  width: 46px;
   height: 46px;
   border-radius: 44px;
   display: flex;
@@ -322,7 +329,6 @@
   flex-shrink: 0;
 
   @include vp-767 {
-    width: 34px;
     height: 34px;
   }
 }

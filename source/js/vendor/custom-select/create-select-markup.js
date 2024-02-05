@@ -13,10 +13,9 @@ const createNativeOptionsMarkup = (items, activeIndex) => {
   }).join('\n');
 };
 
-export const createNativeSelectMarkup = ({id, items, multiple, name, required, activeIndex = []}) => {
-  return `<select ${id ? `id='${id}'` : ''} ${name ? `name='${name}'` : ''} ${multiple ? 'multiple' : ''} ${
-    required ? 'required' : ''
-  } tabindex="-1" aria-hidden="true">
+export const createNativeSelectMarkup = ({ id, items, multiple, name, required, activeIndex = [] }) => {
+  return `<select ${id ? `id='${id}'` : ''} ${name ? `name='${name}'` : ''} ${multiple ? 'multiple' : ''} ${required ? 'required' : ''
+    } tabindex="-1" aria-hidden="true">
             <option value=""></option>
             ${createNativeOptionsMarkup(items, activeIndex)}
           </select>`;
