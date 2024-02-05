@@ -36,17 +36,23 @@ const baseSuccessCallbackSecondary = (event) => {
   });
 };
 
+const baseErrorCallback = (event) => {
+  event.preventDefault();
+};
+
 export const callbacks = {
   basePrimary: {
     reset: true,
     resetTimeout: 500,
     successCallback: baseSuccessCallbackPrimary,
+    errorCallback: baseErrorCallback,
   },
 
   baseSecondary: {
     reset: true,
     resetTimeout: 500,
     successCallback: baseSuccessCallbackSecondary,
+    errorCallback: baseErrorCallback,
   },
 };
 

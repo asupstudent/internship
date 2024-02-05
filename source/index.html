@@ -15,6 +15,19 @@
 </head>
 
 <body>
+
+<!-- Для открытия бургерного меню нужно навесить класс is-menu-opened
+Для закрытия бургерного меню нужно убрать класс is-menu-opened
+элементам:
+data-menu="burger-wrapper"
+data-menu="burger-logo"
+data-menu="burger-button"
+data-menu="burger-site-nav"
+data-menu="burger-overlay"
+
+Установить состояние disabled у элементов (button, custom-input, custom-select, custom-toggle, ссылок на соцсети)
+нужно навесить класс is-disabled -->
+
   <div class="wrapper">
     <header class="header" data-test="slider">
       <h1 class="visually-hidden">Проект "Стажировка" - возможность повысить свою квалификацию</h1>
@@ -457,22 +470,22 @@
       </section>
       <section class="news container container--news" data-test="news" id="news">
         <h2>Новости и материалы</h2>
-        <div class="news__tab-buttons">
+        <div class="news__tab-buttons" data-news="button-container">
           <ul aria-label="Список новостей">
             <li>
-              <button class="news__tab-button is-active" type="button">Общее</button>
+              <button class="news__tab-button is-active" type="button" data-name="news-button" data-filter="all">Общее</button>
             </li>
             <li>
-              <button class="news__tab-button" type="button">Волонтёрство</button>
+              <button class="news__tab-button" type="button" data-name="news-button" data-filter="volunteering">Волонтёрство</button>
             </li>
             <li>
-              <button class="news__tab-button" type="button">Стажировки</button>
+              <button class="news__tab-button" type="button" data-name="news-button" data-filter="internships">Стажировки</button>
             </li>
             <li>
-              <button class="news__tab-button" type="button">Карьера</button>
+              <button class="news__tab-button" type="button" data-name="news-button" data-filter="career">Карьера</button>
             </li>
             <li>
-              <button class="news__tab-button" type="button">Путешествия</button>
+              <button class="news__tab-button" type="button" data-name="news-button" data-filter="travelling">Путешествия</button>
             </li>
           </ul>
         </div>

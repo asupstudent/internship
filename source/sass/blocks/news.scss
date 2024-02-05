@@ -87,6 +87,7 @@ ul li:last-child .news__tab-button {
   cursor: pointer;
   user-select: none;
   transition: border $trans-default, color $trans-default;
+  appearance: none;
 
   &:hover,
   &:focus-visible {
