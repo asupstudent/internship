@@ -21,7 +21,7 @@ const setSliderPrograms = () => {
 
     breakpoints: {
       1440: {
-        slidesPerView: 3,
+        slidesPerView: 'auto',
         spaceBetween: 32,
         allowTouchMove: false,
       },
