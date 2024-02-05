@@ -20,6 +20,7 @@ const setSliderNews = () => {
       nextEl: buttonNext,
       prevEl: buttonPrev,
     },
+    observer: true,
     spaceBetween: 20,
     slidesPerView: 'auto',
     grid: {
