@@ -119,10 +119,6 @@
     transition: color $trans-default;
     width: fit-content;
 
-    &:focus {
-      outline: none;
-    }
-
     &:hover,
     &:focus-visible {
       color: $color-cerulean-blue;

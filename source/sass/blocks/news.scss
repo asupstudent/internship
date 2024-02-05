@@ -85,9 +85,8 @@ ul li:last-child .news__tab-button {
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  outline: none;
   user-select: none;
-  transition: outline $trans-default, color $trans-default;
+  transition: border $trans-default, color $trans-default;
 
   &:hover,
   &:focus-visible {
@@ -105,6 +104,23 @@ ul li:last-child .news__tab-button {
     letter-spacing: 0.24px;
   }
 }
+
+.news__tab-button.is-active {
+  padding: 11px 25px;
+  border: 1px solid $color-cerulean-blue;
+  color: $color-cerulean-blue;
+
+  @include vp-1439 {
+    padding-left: 19px;
+    padding-right: 19px;
+  }
+
+  @include vp-767 {
+    margin-left: 1px;
+    padding: 9px 13px 6px 14px;
+  }
+}
+
 
 .news__slider {
   margin-bottom: 40px;
@@ -428,22 +444,6 @@ ul li:last-child .news__tab-button {
   }
 }
 
-.news__tab-button.is-active {
-  padding: 11px 25px;
-  outline: 1px solid $color-cerulean-blue;
-  color: $color-cerulean-blue;
-
-  @include vp-1439 {
-    padding-left: 19px;
-    padding-right: 19px;
-  }
-
-  @include vp-767 {
-    margin-left: 1px;
-    padding: 9px 13px 6px 14px;
-  }
-}
-
 .news__swiper-controls {
   display: flex;
   justify-content: space-between;
@@ -487,21 +487,17 @@ ul li:last-child .news__tab-button {
     cursor: pointer;
     user-select: none;
 
-    &:focus {
-      outline: none;
-    }
-
     &:hover,
     &:focus-visible {
       color: $color-cerulean-blue;
-      outline: 1px solid $color-cerulean-blue;
+      border: 1px solid $color-cerulean-blue;
       background-color: $color-transparent;
     }
 
     &:active {
       color: $color-white;
       background-color: $color-endeavour;
-      outline: none;
+      border: none;
     }
 
     @include vp-767 {

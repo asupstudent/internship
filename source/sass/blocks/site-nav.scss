@@ -59,7 +59,7 @@
   transition: all $trans-default;
 
   &:focus {
-    outline: none;
+    outline: 1px solid $color-white;
   }
 
   &:hover,
@@ -150,6 +150,10 @@
     padding-left: 10px;
     padding-right: 10px;
     letter-spacing: normal;
+
+    &:focus {
+      outline: 1px solid $color-charcoal;
+    }
 
     &:hover,
     &:focus-visible {

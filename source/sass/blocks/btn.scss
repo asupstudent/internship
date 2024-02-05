@@ -39,10 +39,6 @@
 .btn--secondary {
   background-color: $color-transparent;
 
-  &:focus {
-    outline: none;
-  }
-
   &:hover,
   &:focus-visible {
     svg {
@@ -187,10 +183,6 @@
 
   svg + svg {
     display: none;
-  }
-
-  &:focus {
-    outline: none;
   }
 
   @include vp-767 {

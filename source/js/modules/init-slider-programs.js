@@ -9,6 +9,7 @@ const scrollbar = document.querySelector('[data-swiper="programs-scrollbar"]');
 const setSliderPrograms = () => {
   new Swiper(sliderPrograms, {
     modules: [Scrollbar, Navigation],
+    keyboard: true,
     scrollbar: {
       el: scrollbar,
       draggable: true,
