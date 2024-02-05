@@ -10,7 +10,6 @@ import {initModals} from './modules/init-modals';
 import {initSliderHero} from './modules/init-slider-hero';
 import {initSliderPrograms} from './modules/init-slider-programs';
 import {initSliderNews} from './modules/init-slider-news';
-import {initNewsFilter} from './modules/init-filter-news';
 import {initSliderReviews} from './modules/init-slider-reviews';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -19,7 +18,6 @@ window.addEventListener('DOMContentLoaded', () => {
   initSliderHero();
   initSliderPrograms();
   initSliderNews();
-  initNewsFilter();
   initSliderReviews();
 
   window.addEventListener('load', () => {

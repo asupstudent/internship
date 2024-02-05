@@ -1,14 +1,20 @@
 import Swiper from 'swiper';
-import {Grid, Navigation, Pagination } from 'swiper/modules';
+import {Manipulation, Grid, Navigation, Pagination } from 'swiper/modules';
 
 const newsSlider = document.querySelector('[data-swiper="news"]');
 const buttonPrev = document.querySelector('[data-swiper="news-button-prev"]');
 const buttonNext = document.querySelector('[data-swiper="news-button-next"]');
 const newsPagination = document.querySelector('[data-swiper="news-pagination"]');
+const isActive = 'is-active';
+const buttonContainer = document.querySelector('[data-news="button-container"]');
+const newsButtons = buttonContainer.querySelectorAll('[data-name="news-button"]');
+const newsSlide = document.querySelectorAll('[data-news="slide"]');
+
+let slider;
 
 const setSliderNews = () => {
-  new Swiper(newsSlider, {
-    modules: [Grid, Navigation, Pagination],
+  slider = new Swiper(newsSlider, {
+    modules: [Manipulation, Grid, Navigation, Pagination],
     pagination: {
       el: newsPagination,
       clickable: true,
@@ -49,9 +55,42 @@ const setSliderNews = () => {
   });
 };
 
+const onNewsButtonClick = (activeButton) => {
+  newsButtons.forEach((button) => button.classList.remove(isActive));
+  activeButton.classList.add(isActive);
+};
+
+const updateNewsSlider = (filter) => {
+  slider.slides.forEach((slide) => {
+    const slideFilter = slide.dataset.filter;
+    const isShowSlide = filter === 'all' || slideFilter === filter;
+    if(!isShowSlide) {
+      slide.remove();
+    }
+  });
+};
+
+const onButtonContainerClick = (evt) => {
+  slider.removeAllSlides();
+  slider.appendSlide(newsSlide);
+  slider.update();
+  const currentButton = evt.target.closest('[data-name="news-button"]');
+  if (currentButton) {
+    if (!currentButton.classList.contains(isActive)) {
+      onNewsButtonClick(currentButton);
+    }
+  }
+  const filter = currentButton.dataset.filter || 'all';
+  updateNewsSlider(filter);
+};
+
 const initSliderNews = () => {
   if (document.body.contains(newsSlider)) {
     setSliderNews();
+
+    if (buttonContainer && newsButtons) {
+      buttonContainer.addEventListener('click', onButtonContainerClick);
+    }
   }
 };
 
