@@ -58,10 +58,6 @@
   cursor: pointer;
   transition: all $trans-default;
 
-  &:focus {
-    outline: 1px solid $color-white;
-  }
-
   &:hover,
   &:focus-visible {
     color: $color-white;
