@@ -9,6 +9,9 @@ const isActive = 'is-active';
 const buttonContainer = document.querySelector('[data-news="button-container"]');
 const newsButtons = buttonContainer.querySelectorAll('[data-name="news-button"]');
 const newsSlide = document.querySelectorAll('[data-news="slide"]');
+const isMenuCurrent = 'site-nav__link--current';
+const newsMenuLinksContainer = document.querySelector('[data-filter="news-menu-links"]');
+const newsMenuLinks = newsMenuLinksContainer.querySelectorAll('[data-menu-news="burger-news-link"]');
 
 let slider;
 
@@ -70,10 +73,14 @@ const updateNewsSlider = (filter) => {
   });
 };
 
-const onButtonContainerClick = (evt) => {
+const updateSlider = () => {
   slider.removeAllSlides();
   slider.appendSlide(newsSlide);
   slider.update();
+};
+
+const onButtonContainerClick = (evt) => {
+  updateSlider();
   const currentButton = evt.target.closest('[data-name="news-button"]');
   if (currentButton) {
     if (!currentButton.classList.contains(isActive)) {
@@ -84,12 +91,39 @@ const onButtonContainerClick = (evt) => {
   updateNewsSlider(filter);
 };
 
+const onNewsMenuLinksClick = (activeLink) => {
+  newsMenuLinks.forEach((link) => link.classList.remove(isMenuCurrent));
+  activeLink.classList.add(isMenuCurrent);
+};
+
+const onNewsMenuLinksContainerClick = (evt) => {
+  updateSlider();
+  const currentLink = evt.target.closest('[data-menu-news="burger-news-link"]');
+  if (currentLink) {
+    if (!currentLink.classList.contains(isMenuCurrent)) {
+      onNewsMenuLinksClick(currentLink);
+    }
+  }
+  const filter = currentLink.dataset.filter || 'all';
+  updateNewsSlider(filter);
+  const targetBtn = buttonContainer.querySelector(`[data-filter="${filter}"]`);
+  if (targetBtn) {
+    if (!targetBtn.classList.contains(isActive)) {
+      onNewsButtonClick(targetBtn);
+    }
+  }
+};
+
 const initSliderNews = () => {
   if (document.body.contains(newsSlider)) {
     setSliderNews();
 
     if (buttonContainer && newsButtons) {
       buttonContainer.addEventListener('click', onButtonContainerClick);
+    }
+
+    if (newsMenuLinksContainer && newsMenuLinks) {
+      newsMenuLinksContainer.addEventListener('click', onNewsMenuLinksContainerClick);
     }
   }
 };

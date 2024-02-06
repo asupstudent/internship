@@ -5,6 +5,9 @@ const sliderPrograms = document.querySelector('[data-swiper="programs"]');
 const buttonPrev = document.querySelector('[data-swiper="programs-button-prev"]');
 const buttonNext = document.querySelector('[data-swiper="programs-button-next"]');
 const scrollbar = document.querySelector('[data-swiper="programs-scrollbar"]');
+const isMenuCurrent = 'site-nav__link--current';
+const programsMenuLinksContainer = document.querySelector('[data-filter="programs-menu-links"]');
+const programsMenuLinks = programsMenuLinksContainer.querySelectorAll('[data-menu-programs="burger-programs-link"]');
 
 const setSliderPrograms = () => {
   new Swiper(sliderPrograms, {
@@ -42,9 +45,28 @@ const setSliderPrograms = () => {
   });
 };
 
+const onProgramsMenuLinksClick = (activeLink) => {
+  programsMenuLinks.forEach((link) => link.classList.remove(isMenuCurrent));
+  activeLink.classList.add(isMenuCurrent);
+};
+
+
+const onProgramsMenuLinksContainerClick = (evt) => {
+  const currentLink = evt.target.closest('[data-menu-programs="burger-programs-link"]');
+  if (currentLink) {
+    if (!currentLink.classList.contains(isMenuCurrent)) {
+      onProgramsMenuLinksClick(currentLink);
+    }
+  }
+};
+
 const initSliderPrograms = () => {
   if (document.body.contains(sliderPrograms)) {
     setSliderPrograms();
+  }
+
+  if (programsMenuLinksContainer && programsMenuLinks) {
+    programsMenuLinksContainer.addEventListener('click', onProgramsMenuLinksContainerClick);
   }
 };
 

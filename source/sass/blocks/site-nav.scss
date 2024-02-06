@@ -56,11 +56,12 @@
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
-  transition: all $trans-default;
+  transition: all $trans-600;
 
   &:hover,
   &:focus-visible {
     color: $color-white;
+    font-weight: 500;
 
     svg {
       opacity: 1;
@@ -107,6 +108,10 @@
       color: $color-white;
     }
   }
+}
+
+.site-nav__nested-list .site-nav__link--current {
+  color: $color-white-90;
 }
 
 .site-nav--footer {
