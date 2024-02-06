@@ -152,6 +152,7 @@
     padding-left: 10px;
     padding-right: 10px;
     letter-spacing: normal;
+    transition: none;
 
     &:focus {
       outline: 1px solid $color-charcoal;
@@ -160,6 +161,7 @@
     &:hover,
     &:focus-visible {
       color: $color-cerulean-blue;
+      font-weight: 400;
     }
 
     &:active {
