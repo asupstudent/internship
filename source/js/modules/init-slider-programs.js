@@ -19,22 +19,19 @@ const setSliderPrograms = () => {
       nextEl: buttonNext,
       prevEl: buttonPrev,
     },
-
+    slidesPerView: 'auto',
     breakpoints: {
       1440: {
-        slidesPerView: 'auto',
         spaceBetween: 32,
         allowTouchMove: false,
       },
       768: {
         spaceBetween: 30,
-        slidesPerView: 'auto',
         scrollbar: {
           dragSize: 324,
         },
       },
       320: {
-        slidesPerView: 1,
         spaceBetween: 15,
         scrollbar: {
           el: '',
