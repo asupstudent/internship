@@ -285,6 +285,7 @@ ul li:last-child .news__tab-button {
   color: $color-cerulean-blue;
   background-color: $color-alabaster;
   border-radius: 0 12px 0 0;
+  max-width: 182px;
 
   &::after {
     width: 16px;
@@ -292,6 +293,14 @@ ul li:last-child .news__tab-button {
     bottom: 0;
     right: -16px;
     background-color: $color-alabaster;
+  }
+
+  @include vp-1439 {
+    max-width: 175px;
+  }
+
+  @include vp-767 {
+    max-height: 168px;
   }
 }
 
