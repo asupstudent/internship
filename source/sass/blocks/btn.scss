@@ -193,6 +193,10 @@
     display: none;
   }
 
+  span {
+    text-align: left;
+  }
+
   @include vp-767 {
     font-size: 14px;
     line-height: 14px;
